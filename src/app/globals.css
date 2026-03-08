@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-display: var(--font-syne);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.375rem;
+
+  /* Zyndrex design system */
+  --bg-primary:       #0A0F1E;
+  --bg-surface:       #0F1A2E;
+  --bg-elevated:      #1A2740;
+  --accent-primary:   #2D7DFA;
+  --accent-secondary: #00E5B0;
+  --text-primary:     #F0F4FF;
+  --text-muted:       #8B9AB5;
+  --border-color:     #1E2E45;
+
+  /* Shadcn mappings */
+  --background: #0A0F1E;
+  --foreground: #F0F4FF;
+  --card: #0F1A2E;
+  --card-foreground: #F0F4FF;
+  --popover: #0F1A2E;
+  --popover-foreground: #F0F4FF;
+  --primary: #2D7DFA;
+  --primary-foreground: #F0F4FF;
+  --secondary: #1A2740;
+  --secondary-foreground: #F0F4FF;
+  --muted: #1A2740;
+  --muted-foreground: #8B9AB5;
+  --accent: #1A2740;
+  --accent-foreground: #F0F4FF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #1E2E45;
+  --input: #1A2740;
+  --ring: #2D7DFA;
+  --sidebar: #0F1A2E;
+  --sidebar-foreground: #F0F4FF;
+  --sidebar-primary: #2D7DFA;
+  --sidebar-primary-foreground: #F0F4FF;
+  --sidebar-accent: #1A2740;
+  --sidebar-accent-foreground: #F0F4FF;
+  --sidebar-border: #1E2E45;
+  --sidebar-ring: #2D7DFA;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-color: #0A0F1E;
+    color: #F0F4FF;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-syne), system-ui, sans-serif;
+  }
+}
+
+/* Grid overlay for hero */
+.grid-overlay {
+  background-image: 
+    linear-gradient(rgba(30, 46, 69, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 46, 69, 0.4) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Glow radial gradient */
+.hero-glow {
+  background: radial-gradient(ellipse 60% 50% at 15% 80%, rgba(45, 125, 250, 0.12) 0%, transparent 70%);
+}
+
+/* Tech chip font */
+.font-mono-tech {
+  font-family: var(--font-jetbrains-mono), 'Courier New', monospace;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2E45;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D7DFA;
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
