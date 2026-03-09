@@ -77,24 +77,24 @@ export default function WebSprintPage() {
             className="text-center md:text-left"
           >
             <div className="mb-6 inline-flex items-center rounded-sm border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-3 py-1.5">
-              <span className="font-[family-name:var(--font-jetbrains-mono)] text-xs uppercase tracking-widest text-[#F59E0B]">
+              <span className="font-[family-name:var(--font-jetbrains-mono)] text-[10px] sm:text-xs uppercase tracking-widest text-[#F59E0B]">
                 New Program
               </span>
             </div>
             
-            <h1 className="mb-6 font-[family-name:var(--font-syne)] text-5xl font-bold leading-tight text-[#F0F4FF] md:text-6xl lg:text-7xl">
+            <h1 className="mb-6 font-[family-name:var(--font-syne)] text-4xl sm:text-5xl font-bold leading-tight text-[#F0F4FF] md:text-6xl lg:text-7xl">
               WebSprint <br />
               <span className="text-[#00D4A0]">Zero-Risk Website Program</span>
             </h1>
             
-            <p className="mb-10 max-w-2xl text-lg text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
+            <p className="mb-10 max-w-2xl text-base sm:text-lg text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed mx-auto md:mx-0">
               We find contractor and trade businesses with no web presence, build them a professional website in 24 hours, and collect $500 only after they approve.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
               <Link
                 href="/contact"
-                className="rounded-md bg-[#00D4A0] px-8 py-4 text-sm font-[family-name:var(--font-dm-sans)] font-bold text-[#0A0F1E] hover:bg-[#00D4A0]/90 transition-colors"
+                className="w-full sm:w-auto text-center rounded-md bg-[#00D4A0] px-8 py-4 text-sm font-[family-name:var(--font-dm-sans)] font-bold text-[#0A0F1E] hover:bg-[#00D4A0]/90 transition-colors"
               >
                 Get Your Site for $500
               </Link>
@@ -145,7 +145,7 @@ export default function WebSprintPage() {
 
           {/* How It Works */}
           <div className="mb-24">
-            <p className="mb-6 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00D4A0]">
+            <p className="mb-6 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00D4A0]">
               How It Works
             </p>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
@@ -170,7 +170,7 @@ export default function WebSprintPage() {
 
           {/* Tech Stack */}
           <div className="mb-24">
-            <p className="mb-6 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00D4A0]">
+            <p className="mb-6 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00D4A0]">
               Built With
             </p>
             <div className="flex flex-wrap gap-2">
@@ -181,11 +181,11 @@ export default function WebSprintPage() {
           </div>
 
           {/* Final CTA */}
-          <div className="rounded-xl border border-[#00D4A0]/30 bg-[#00D4A0]/5 p-8 md:p-12 text-center">
-            <h2 className="mb-4 font-[family-name:var(--font-syne)] text-3xl font-bold text-[#F0F4FF]">
+          <div className="rounded-xl border border-[#00D4A0]/30 bg-[#00D4A0]/5 p-6 sm:p-8 md:p-12 text-center">
+            <h2 className="mb-4 font-[family-name:var(--font-syne)] text-2xl sm:text-3xl font-bold text-[#F0F4FF]">
               Ready to upgrade your business?
             </h2>
-            <p className="mb-8 text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] max-w-xl mx-auto">
+            <p className="mb-8 text-sm sm:text-base text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] max-w-xl mx-auto">
               No deposit. No long contract. Just a great website delivered in 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

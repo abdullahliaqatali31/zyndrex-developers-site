@@ -30,7 +30,7 @@ export default function WorkContent() {
       {/* Projects */}
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -56,6 +56,23 @@ export default function WorkContent() {
                 outcome="Millions of records. Automated. 24/7. No human intervention required."
                 techStack={["Node.js", "BullMQ", "Redis", "PostgreSQL", "Socket.IO", "Supabase", "Nginx", "PM2"]}
                 href="/work/email-pipeline"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+            >
+              <ProjectCard
+                tag="Website Program"
+                tagColor="#F59E0B"
+                title="WebSprint — Zero-Risk Website Program for Contractors"
+                outcome="$500 per site · 24hr delivery · 100% post-approval payment"
+                techStack={["Framer", "Vercel", "Namecheap", "Elfsight", "Google Analytics", "WhatsApp API"]}
+                href="/websprint"
+                description="A repeatable lead generation and delivery system that finds local trade businesses with no website on Google Maps, builds a production site in 24 hours using AI-assisted tools, and charges $500 only after the client approves the result."
+                ctaText="View Program"
               />
             </motion.div>
 

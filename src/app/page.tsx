@@ -76,7 +76,7 @@ export default function HomePage() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-20 pb-20 sm:pb-32">
         {/* grid overlay */}
         <div className="absolute inset-0 grid-overlay opacity-100" />
         {/* glow */}
@@ -310,7 +310,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2"
           >
             <ProjectCard
               tag="Internal Operations"
@@ -326,16 +326,18 @@ export default function HomePage() {
               techStack={["Node.js", "BullMQ", "Redis", "PostgreSQL", "Socket.IO"]}
               href="/work/email-pipeline"
             />
-            <ProjectCard
-              tag="Website Program"
-              tagColor="#F59E0B"
-              title="WebSprint — Zero-Risk Website Program for Contractors"
-              outcome="$500 per site · 24hr delivery · 100% post-approval payment"
-              techStack={["Framer", "Vercel", "Namecheap", "Elfsight", "Google Analytics", "WhatsApp API"]}
-              href="/websprint"
-              description="A repeatable lead generation and delivery system that finds local trade businesses with no website on Google Maps, builds a production site in 24 hours using AI-assisted tools, and charges $500 only after the client approves the result."
-              ctaText="View Program"
-            />
+            <div className="md:col-span-2 lg:col-span-1 lg:col-start-2">
+              <ProjectCard
+                tag="Website Program"
+                tagColor="#F59E0B"
+                title="WebSprint — Zero-Risk Website Program for Contractors"
+                outcome="$500 per site · 24hr delivery · 100% post-approval payment"
+                techStack={["Framer", "Vercel", "Namecheap", "Elfsight", "Google Analytics", "WhatsApp API"]}
+                href="/websprint"
+                description="A repeatable lead generation and delivery system that finds local trade businesses with no website on Google Maps, builds a production site in 24 hours using AI-assisted tools, and charges $500 only after the client approves the result."
+                ctaText="View Program"
+              />
+            </div>
           </motion.div>
         </div>
       </section>

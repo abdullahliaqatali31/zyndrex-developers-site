@@ -35,13 +35,13 @@ function Counter({ value }: { value: string }) {
   }, [inView, numericValue, spring]);
 
   if (isNaN(numericValue)) {
-    return <span className="font-[family-name:var(--font-jetbrains-mono)] text-3xl font-bold text-[#2D7DFA] md:text-4xl">{value}</span>;
+    return <span className="font-[family-name:var(--font-jetbrains-mono)] text-2xl font-bold text-[#2D7DFA] md:text-4xl break-all">{value}</span>;
   }
 
   return (
     <motion.span 
       ref={ref}
-      className="font-[family-name:var(--font-jetbrains-mono)] text-3xl font-bold text-[#2D7DFA] md:text-4xl"
+      className="font-[family-name:var(--font-jetbrains-mono)] text-2xl font-bold text-[#2D7DFA] md:text-4xl break-all"
     >
       {displayValue}
     </motion.span>
@@ -50,13 +50,13 @@ function Counter({ value }: { value: string }) {
 
 export default function StatTile({ number, label, sublabel }: StatTileProps) {
   return (
-    <div className="flex flex-col items-center text-center px-6 py-6">
+    <div className="flex flex-col items-center text-center px-4 py-6 sm:px-6">
       <Counter value={number} />
-      <span className="mt-1 text-sm font-[family-name:var(--font-dm-sans)] font-medium text-[#F0F4FF]">
+      <span className="mt-2 text-xs sm:text-sm font-[family-name:var(--font-dm-sans)] font-medium text-[#F0F4FF]">
         {label}
       </span>
       {sublabel && (
-        <span className="mt-0.5 text-xs font-[family-name:var(--font-dm-sans)] text-[#8B9AB5]">
+        <span className="mt-0.5 text-[10px] sm:text-xs font-[family-name:var(--font-dm-sans)] text-[#8B9AB5]">
           {sublabel}
         </span>
       )}

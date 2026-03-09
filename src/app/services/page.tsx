@@ -108,41 +108,41 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: i * 0.05 }}
                 className="py-14 first:pt-0"
               >
-                <div className="flex flex-col gap-8 md:flex-row">
+                <div className="flex flex-col gap-6 md:gap-8 md:flex-row">
                   <div className="flex-shrink-0">
-                    <span className="font-[family-name:var(--font-jetbrains-mono)] text-5xl font-bold text-[#2D7DFA]/25">
+                    <span className="font-[family-name:var(--font-jetbrains-mono)] text-4xl sm:text-5xl font-bold text-[#2D7DFA]/25">
                       {svc.number}
                     </span>
                   </div>
                   <div className="flex flex-col gap-6">
-                    <h2 className="font-[family-name:var(--font-syne)] text-2xl font-bold text-[#F0F4FF]">
+                    <h2 className="font-[family-name:var(--font-syne)] text-xl sm:text-2xl font-bold text-[#F0F4FF]">
                       {svc.title}
                     </h2>
 
                     <div className="flex flex-col gap-5">
                       <div>
-                        <p className="mb-1.5 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#8B9AB5]">
+                        <p className="mb-1.5 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#8B9AB5]">
                           The Problem
                         </p>
-                        <p className="text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
+                        <p className="text-sm sm:text-base text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
                           {svc.problem}
                         </p>
                       </div>
 
                       <div>
-                        <p className="mb-1.5 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
+                        <p className="mb-1.5 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
                           We Deliver
                         </p>
-                        <p className="text-[#F0F4FF] font-[family-name:var(--font-dm-sans)] leading-relaxed">
+                        <p className="text-sm sm:text-base text-[#F0F4FF] font-[family-name:var(--font-dm-sans)] leading-relaxed">
                           {svc.deliver}
                         </p>
                       </div>
 
                       <div className="rounded-sm border-l-2 border-[#2D7DFA] pl-4">
-                        <p className="mb-0.5 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wide text-[#8B9AB5]">
+                        <p className="mb-0.5 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-wide text-[#8B9AB5]">
                           Example
                         </p>
-                        <p className="text-sm text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
                           {svc.example}
                         </p>
                       </div>

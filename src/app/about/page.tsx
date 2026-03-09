@@ -72,19 +72,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-5xl px-6 py-20">
+      <div className="mx-auto max-w-5xl px-6 py-12 sm:py-20">
         {/* Story */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <p className="mb-4 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
+          <p className="mb-4 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
             Our Story
           </p>
-          <div className="flex flex-col gap-5 text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
+          <div className="flex flex-col gap-4 sm:gap-5 text-sm sm:text-base text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
             <p>
               Most software agencies build what they&apos;re asked to build. We
               build what the business actually needs.
@@ -116,9 +116,9 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <p className="mb-8 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
+          <p className="mb-8 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
             Our Engineering Philosophy
           </p>
           <div className="flex flex-col gap-6">
@@ -129,16 +129,16 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="flex gap-6"
+                className="flex gap-4 sm:gap-6"
               >
-                <span className="flex-shrink-0 font-[family-name:var(--font-jetbrains-mono)] text-3xl font-bold text-[#2D7DFA]/30 leading-none mt-1">
+                <span className="flex-shrink-0 font-[family-name:var(--font-jetbrains-mono)] text-2xl sm:text-3xl font-bold text-[#2D7DFA]/30 leading-none mt-1">
                   {item.number}
                 </span>
                 <div>
                   <p className="mb-1 font-[family-name:var(--font-syne)] text-base font-semibold text-[#F0F4FF]">
                     {item.title}
                   </p>
-                  <p className="text-sm text-[#8B9AB5] font-[family-name:var(--font-dm-sans)]">
+                  <p className="text-sm text-[#8B9AB5] font-[family-name:var(--font-dm-sans)] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -153,9 +153,9 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <p className="mb-4 text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
+          <p className="mb-4 text-[10px] sm:text-xs font-[family-name:var(--font-jetbrains-mono)] uppercase tracking-widest text-[#00E5B0]">
             What We Use
           </p>
           <p className="mb-5 text-sm text-[#8B9AB5] font-[family-name:var(--font-dm-sans)]">
@@ -167,6 +167,7 @@ export default function AboutPage() {
             ))}
           </div>
         </motion.section>
+
 
         {/* CTA */}
         <motion.div
