@@ -158,15 +158,15 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 flex w-full justify-center lg:mt-0 lg:w-auto"
+            className="mt-8 flex w-full justify-center lg:mt-0 lg:w-auto"
           >
-            <div className="group relative w-full max-w-[480px] overflow-hidden rounded-xl border border-[#1E2E45] bg-[#0A0F1E]/90 shadow-2xl backdrop-blur-md">
+            <div className="group relative w-full max-w-[380px] sm:max-w-[480px] overflow-hidden rounded-xl border border-[#1E2E45] bg-[#0A0F1E]/90 shadow-2xl backdrop-blur-md">
               
               {/* Window Header */}
-              <div className="flex items-center gap-2 border-b border-[#1E2E45] bg-[#0F1A2E]/50 px-4 py-3">
-                <div className="h-3 w-3 rounded-full bg-[#FF5F56]" />
-                <div className="h-3 w-3 rounded-full bg-[#FFBD2E]" />
-                <div className="h-3 w-3 rounded-full bg-[#27C93F]" />
+              <div className="flex items-center gap-2 border-b border-[#1E2E45] bg-[#0F1A2E]/50 px-3 py-2 sm:px-4 sm:py-3">
+                <div className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#FF5F56]" />
+                <div className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#FFBD2E]" />
+                <div className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-[#27C93F]" />
                 <div className="ml-2 text-[10px] font-[family-name:var(--font-jetbrains-mono)] text-[#4A5A7A] opacity-60">
                   zyndrex-core.tsx
                 </div>
@@ -176,15 +176,15 @@ export default function HomePage() {
               <div className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(rgba(30,46,69,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(30,46,69,0.1)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
 
               {/* Core Concept Container */}
-              <div className="relative z-10 flex flex-col gap-6 p-6 sm:p-8">
+              <div className="relative z-10 flex flex-col gap-4 p-5 sm:gap-6 sm:p-8">
                 
                 {/* 1. Systems Architecture */}
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#2D7DFA]/30 bg-[#2D7DFA]/10 text-[#2D7DFA] shadow-[0_0_15px_rgba(45,125,250,0.1)]">
-                    <Layers size={20} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-lg border border-[#2D7DFA]/30 bg-[#2D7DFA]/10 text-[#2D7DFA] shadow-[0_0_15px_rgba(45,125,250,0.1)]">
+                    <Layers size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div className="flex-1">
-                    <p className="font-[family-name:var(--font-syne)] text-sm font-semibold text-[#F0F4FF]">
+                    <p className="font-[family-name:var(--font-syne)] text-xs sm:text-sm font-semibold text-[#F0F4FF]">
                       System Architecture
                     </p>
                     <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-[#1E2E45]">
@@ -199,15 +199,15 @@ export default function HomePage() {
                 </div>
 
                 {/* Connection Line */}
-                <div className="ml-6 h-8 w-px bg-gradient-to-b from-[#2D7DFA]/50 to-[#00E5B0]/50" />
+                <div className="ml-5 h-4 sm:h-8 w-px bg-gradient-to-b from-[#2D7DFA]/50 to-[#00E5B0]/50 sm:ml-6" />
 
                 {/* 2. Product Engineering */}
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#00E5B0]/30 bg-[#00E5B0]/10 text-[#00E5B0] shadow-[0_0_15px_rgba(0,229,176,0.1)]">
-                    <Box size={20} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-lg border border-[#00E5B0]/30 bg-[#00E5B0]/10 text-[#00E5B0] shadow-[0_0_15px_rgba(0,229,176,0.1)]">
+                    <Box size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div className="flex-1">
-                    <p className="font-[family-name:var(--font-syne)] text-sm font-semibold text-[#F0F4FF]">
+                    <p className="font-[family-name:var(--font-syne)] text-xs sm:text-sm font-semibold text-[#F0F4FF]">
                       Product Engineering
                     </p>
                     <div className="mt-2 flex gap-1">
@@ -216,7 +216,7 @@ export default function HomePage() {
                           key={i}
                           animate={{ opacity: [0.3, 1, 0.3] }}
                           transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
-                          className="h-1.5 w-8 rounded-full bg-[#00E5B0]"
+                          className="h-1.5 w-6 sm:w-8 rounded-full bg-[#00E5B0]"
                         />
                       ))}
                     </div>
@@ -224,15 +224,15 @@ export default function HomePage() {
                 </div>
 
                 {/* Connection Line */}
-                <div className="ml-6 h-8 w-px bg-gradient-to-b from-[#00E5B0]/50 to-[#F59E0B]/50" />
+                <div className="ml-5 h-4 sm:h-8 w-px bg-gradient-to-b from-[#00E5B0]/50 to-[#F59E0B]/50 sm:ml-6" />
 
                 {/* 3. Automation & Scale */}
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#F59E0B]/30 bg-[#F59E0B]/10 text-[#F59E0B] shadow-[0_0_15px_rgba(245,158,11,0.1)]">
-                    <GitMerge size={20} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-lg border border-[#F59E0B]/30 bg-[#F59E0B]/10 text-[#F59E0B] shadow-[0_0_15px_rgba(245,158,11,0.1)]">
+                    <GitMerge size={18} className="sm:w-5 sm:h-5" />
                   </div>
                   <div className="flex-1">
-                    <p className="font-[family-name:var(--font-syne)] text-sm font-semibold text-[#F0F4FF]">
+                    <p className="font-[family-name:var(--font-syne)] text-xs sm:text-sm font-semibold text-[#F0F4FF]">
                       Automation & Scale
                     </p>
                     <div className="mt-2 flex items-center gap-2 text-[10px] font-[family-name:var(--font-jetbrains-mono)] text-[#8B9AB5]">
